@@ -1,0 +1,6 @@
+*.csv
+*.zip
+*.parquet
+data/
+checkpoints/
+.env
