@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 # MAGIC %sql
 # MAGIC USE CATALOG capstone_five;
 # MAGIC
@@ -145,6 +149,6 @@
 # COMMAND ----------
 
 # MAGIC %sql
-# MAGIC ALTER STREAMING TABLE   silver.vitals     SET TAGS ('domain' = 'clinical', 'contains_phi' = 'true', 'layer' = 'silver');
-# MAGIC ALTER STREAMING TABLE   gold.anomalies    SET TAGS ('domain' = 'clinical', 'contains_phi' = 'true', 'layer' = 'gold');
-# MAGIC ALTER MATERIALIZED VIEW gold.vitals_1min  SET TAGS ('domain' = 'clinical', 'contains_phi' = 'true', 'layer' = 'gold');
+# MAGIC ALTER STREAMING TABLE   capstone_five.silver.vitals     SET TAGS ('domain' = 'clinical', 'contains_phi' = 'true', 'layer' = 'silver');
+# MAGIC ALTER STREAMING TABLE   capstone_five.gold.anomalies    SET TAGS ('domain' = 'clinical', 'contains_phi' = 'true', 'layer' = 'gold');
+# MAGIC ALTER MATERIALIZED VIEW capstone_five.gold.vitals_1min  SET TAGS ('domain' = 'clinical', 'layer' = 'gold');
